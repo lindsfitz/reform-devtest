@@ -6,8 +6,8 @@ export default function Trade() {
 
     return (
         <div>
-            <h1>TRADE IN YOUR CAR EVERY MONTH.</h1>
-            <h3>Use Eleanor</h3>
+            <h2 class='section-title'>TRADE IN YOUR CAR EVERY MONTH.</h2>
+            <h3 class='section-sub'>Use Eleanor Trade-In Credits to trade in your vehicle for something else in our luxurious inventory.  Nothing says “June” like a new car!</h3>
             <div>
                 <div>
                     <div>

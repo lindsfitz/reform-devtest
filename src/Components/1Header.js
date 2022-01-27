@@ -1,40 +1,39 @@
 import { React, useRef, useState, useEffect } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Header() {
+
+    const boxRef = useRef();
+    const carRef = useRef();
+
+    useEffect(()=> {
+        gsap.from(boxRef.current, { duration: 0.5, x: -400 })
+
+        gsap.from(carRef.current, { duration: 1, x: -400 })
+    }, [])
 
 
     return (
         <div>
-            <div>
+            <div id='header-bg-div' ref={boxRef}>
                 {/* This div is to create space for the yellow background */}
-                {/* position absolutely in the background - rough estimate on design for size:
-                width 414px; height 340px; left/top: 0 */}
             </div>
-            <div>
-                {/* div for the company logo -- not sure if this is a font style or an image yet so for the meantime will just be a header */}
-                <h1>Eleanor</h1>
-            </div>
-            <div>
+            <img style={{ position: 'absolute', top: '50px', left: '19px' }} src='/Images/logo-white.png' />
+            <div style={{ position: 'absolute', top: '90px', left: '19px' }}>
                 {/* div for the tagline and the link to the app store */}
-                {/* HEADER: 53px size; absolutely positioned; white font color; BebasNeue font */}
-                <h1>DRIVE A NEW CAR EVERY MONTH.</h1>
-                <h3>Available On the App</h3>
-                {/* LINK: 16px; 54px line height; dark grey font color; absolute positioning */}
+                <h1 id='main-heading'>DRIVE A NEW {<br />} CAR EVERY MONTH.</h1>
+                <div className='app-link' id='header-applink'>
+                    Available On the App
+                    <img src='/Images/arrow-right.png' />
+                </div>
+            <img ref={carRef} id='header-A7' src='/Images/A7-MY18.png' />
+            {/* left back car image */}
+            <img ref={carRef} id='header-car1' src='/Images/car1.png' />
+            {/* third car img */}
+            <img ref={carRef} id='header-porsche' src='/Images/porsche-model.png' />
+            {/* front porsche image */}
             </div>
-            <div>
-                <div>
-                    {/* left back car image: background url of image link; absolutely positioned; z-index of -1 using transform property
-                    rough estimate from design: width 225px; height 97px */}
-                </div>
-                <div>
-                    {/* front porsche image: bg url; absolute position; width 285px */}
-                </div>
-                <div>
-                    {/* third car img: bg url; absolute position; width 238.91; z index of -1 */}
-                </div>
-            </div>
-
         </div>
     )
 }

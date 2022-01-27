@@ -10,15 +10,23 @@ export default function Select() {
             mpg: '25/29',
             HPstat: '247',
             acceleration: '6.4',
-            image:''
+            image:'range-rover'
         },
+        second: {
+            name: 'PORSCHE',
+            subtitle:'2019 - 911 CARRERA S',
+            mpg:'19/24',
+            HPstat:'443',
+            acceleration:'3.2',
+            image:'porsche-model'
+        }
     }
 
 
     return (
         <div>
-            <h1>Select a vehicle from your phone.</h1>
-            <h3>Select from</h3>
+            <h2 class='section-title'>SELECT A VEHICLE FROM YOUR PHONE.</h2>
+            <h3 class='section-sub'>Select from a wide range of luxury vehicles in our inventory.  Drive it for a month, trade it the next for something else you have always wanted to own.</h3>
             <div>
                 <div>
                     {/* empty for yellow bg */}

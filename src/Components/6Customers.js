@@ -6,8 +6,8 @@ export default function Customers() {
 
     return (
         <div>
-            <h1>CUSTOMERS WITH THAT NEW CAR SMELL</h1>
-            <h3>${`"With Eleanor"`}</h3>
+            <h2 class='section-title'>CUSTOMERS WITH THAT NEW CAR SMELL</h2>
+            <h3 class='section-sub'>${`“With Eleanor I was able to drive 2 of my dream cars this year!  The process is always easy and affordable!”`}</h3>
             <p>Alex Bateman, Interface Designer</p>
             <div>
                 {/* empty div for lil page divider here -- height of 4px and color is #F4F4F5 */}

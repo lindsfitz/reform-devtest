@@ -1,17 +1,14 @@
 import { React, useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import Header from "./Components/1Header";
+import './style.css'
 
 function App() {
-  // store a reference to the box div
-  const boxRef = useRef();
 
-  // wait until DOM has been rendered
-  useEffect(() => {
-    gsap.to(boxRef.current, { rotation: "+=360" });
-  });
-  
-  // DOM to render
-  return <div className="box" ref={boxRef}>Hello</div>;
+  return (
+    <Header />
+  )
+
 }
 
 export default App;
