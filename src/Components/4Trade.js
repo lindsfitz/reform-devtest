@@ -5,8 +5,8 @@ export default function Trade() {
 
 
     return (
-        <div style={{ position: 'relative', top:'500px' }}>
-            <div style={{margin: '300px 20px 20px 20px'}}>
+        <div id='section-four'>
+            <div id='trade-text'>
                 <h2 className='section-title'>TRADE IN YOUR CAR EVERY MONTH.</h2>
                 <h3 className='section-sub'>Use Eleanor Trade-In Credits to trade in your vehicle for something else in our luxurious inventory.  Nothing says “June” like a new car!</h3>
             </div>

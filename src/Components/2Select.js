@@ -57,10 +57,12 @@ export default function Select() {
 
 
     return (
-        <div className='first' id='section-two' ref={el} style={{ marginTop: '300px', marginLeft: '20px' }}>
-            <h2 className='section-title'>SELECT A VEHICLE FROM YOUR PHONE.</h2>
-            <h3 className='section-sub'>Select from a wide range of luxury vehicles in our inventory.  Drive it for a month, trade it the next for something else you have always wanted to own.</h3>
-            <div style={{position:'relative'}}>
+        <div className='first' id='section-two' ref={el}>
+            <div id='select-textcontent'>
+                <h2 className='section-title'>SELECT A VEHICLE FROM YOUR PHONE.</h2>
+                <h3 className='section-sub'>Select from a wide range of luxury vehicles in our inventory.  Drive it for a month, trade it the next for something else you have always wanted to own.</h3>
+            </div>
+            <div style={{ position: 'relative' }}>
                 <div id='section-bg-div'>
                     <div id='arrows'>
 

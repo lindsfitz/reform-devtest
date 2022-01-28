@@ -4,6 +4,7 @@ import Header from "./Components/1Header";
 import Select from './Components/2Select';
 import Delivered from "./Components/3Delivered";
 import Trade from "./Components/4Trade";
+import Boxes from "./Components/5Boxes";
 import Customers from "./Components/6Customers";
 import Footer from "./Components/7Footer";
 import './style.css'
@@ -17,6 +18,7 @@ function App() {
       <Select />
       <Delivered />
       <Trade />
+      <Boxes />
       <Customers />
       <Footer />
 

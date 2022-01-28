@@ -3,35 +3,40 @@ import { gsap } from "gsap";
 
 export default function Boxes() {
 
-    const boxContent = {
-        simple: {
+    const boxContent = [
+        {
             image: 'simple.png',
             title: 'SIMPLE MONTHLY PRICING',
-            content:'Pick your plan, pay the monthly price.  Thats it.  No hidden fees!'
+            content:'Pick your plan, pay the monthly price.  Thats it.  No hidden fees!',
+            key:1
         },
-        vehicle: {
+        {
             image: 'vehicle.png',
             title: 'VEHICLE INSURANCE INCLUDED',
-            content:"That’s right, you’re covered.  All Eleanor plans include insurance coverage."
+            content:"That’s right, you’re covered.  All Eleanor plans include insurance coverage.",
+            key:2
         },
-        maintenance: {
+        {
             image: 'maintenance.png',
             title: 'MAINTENANCE IS COVERED',
-            content: "Leave it us.  Don’t worry about maintaining your vehicle.  Eleanor covers that as well."
+            content: "Leave it us.  Don’t worry about maintaining your vehicle.  Eleanor covers that as well.",
+            key:3
         }
-    }
+    ]
 
 
     return (
-        <div>
-            <div>
-                {/* this div is set to flexbox */}
-                <div>
-                    {/* image/icon */}
-                    {/* title */}
-                    {/* subtitle */}
+        <div style={{marginTop:'700px'}}>
+            <div className='boxes-container'>
+                
+               { boxContent.map((item) => (
+                <div className='box-wrapper' key={item.key}>
+                    <img className='box-image' src={`/Images/${item.image}`} />
+                    <h2 className='box-title'>{item.title}</h2>
+                    <h3 className='box-content'>{item.content}</h3>
                 </div>
-                {/* ****Will probably create an object that has the content for these boxes as they repeat the same format and therefore can just be reused */}
+                ))}
+                
             </div>
 
         </div>
