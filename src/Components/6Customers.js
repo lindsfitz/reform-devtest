@@ -15,7 +15,7 @@ export default function Customers() {
                 </div>
                 <div className='app-link'>
                     Available On the App
-                    <img src='/Images/arrow-right.png' />
+                    <button><img src='/Images/arrow-right.png' /></button>
                 </div>
             </div>
             <div id='customer-bg-div'>

@@ -8,8 +8,8 @@ export default function Select() {
 
 
 
-    const vehicles = {
-        first: {
+    const vehicles = [
+        {
             name: 'LAND ROVER',
             subtitle: '2019 - RANGE ROVER VELAR',
             mpg: '25/29',
@@ -17,7 +17,7 @@ export default function Select() {
             acceleration: '6.4',
             image: 'range-rover'
         },
-        second: {
+        {
             name: 'PORSCHE',
             subtitle: '2019 - 911 CARRERA S',
             mpg: '19/24',
@@ -25,14 +25,14 @@ export default function Select() {
             acceleration: '3.2',
             image: 'porsche-model'
         }
-    }
+    ]
 
-    const [currentCar, setCurrentCar] = useState(vehicles.first)
+    const [vIndex, setvIndex] = useState(0)
 
-    const toggleCar = () => {
-        setCurrentCar(vehicles.second)
-
-    }
+    // const toggleCar = () => {
+    //     if (vIndex = 0) { setvIndex(1) }
+    //     else {setvIndex(0)}
+    // }
 
     const el = useRef();
     const q = gsap.utils.selector(el);
@@ -66,32 +66,32 @@ export default function Select() {
                 <div id='section-bg-div'>
                     <div id='arrows'>
 
-                        <button>
+                        <button onClick={()=>setvIndex(0)}>
                             <img src='/Images/arrow-left.png' />
                         </button>
-                        <button>
+                        <button onClick={()=> setvIndex(1)}>
                             <img src='/Images/arrow-right.png' />
                         </button>
                     </div>
                     <div id='vehicle-content'>
-                        <div id='car-title'>{currentCar.name}</div>
-                        <div id='car-sub'>{currentCar.subtitle}</div>
+                        <div id='car-title'>{vehicles[vIndex].name}</div>
+                        <div id='car-sub'>{vehicles[vIndex].subtitle}</div>
                         <div className='stat-boxes'>
                             <img src='/Images/mpg.png' />
-                            <div>{currentCar.mpg}</div>
+                            <div>{vehicles[vIndex].mpg}</div>
                         </div>
                         <div className='stat-boxes'>
                             <img src='/Images/hpstat.png' />
-                            <div>{currentCar.HPstat}</div>
+                            <div>{vehicles[vIndex].HPstat}</div>
                         </div>
                         <div className='stat-boxes'>
                             <img src='/Images/accelerate.png' />
-                            <div>{currentCar.acceleration}</div>
+                            <div>{vehicles[vIndex].acceleration}</div>
                         </div>
                         {/* div for stats section on diff cars -- same format but different content. OnClick, show content of next index in vehicle object */}
                     </div>
                 </div>
-                <img id='car-image' src={`/Images/${currentCar.image}.png`} />
+                <img id='car-image' src={`/Images/${vehicles[vIndex].image}.png`} />
             </div>
         </div>
 

@@ -28,7 +28,7 @@ export default function Header() {
                     <h1 className='third' id='main-heading'>DRIVE A NEW {<br />} CAR EVERY MONTH.</h1>
                     <div className='app-link third' id='header-applink'>
                         Available On the App
-                        <img src='/Images/arrow-right.png' />
+                        <button><img src='/Images/arrow-right.png' /></button>
                     </div>
                     <img className='car' id='header-A7' src='/Images/A7-MY18.png' />
                     {/* left back car image */}

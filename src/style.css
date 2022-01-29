@@ -266,18 +266,22 @@ body {
     font-family: "Eina03-Regular";
 }
 
+button {
+    background: transparent;
+    border: none;
+}
+
 
 /* -------SECTION SIX --------- */
 
 #section-six {
     display:flex;
     flex-direction: row-reverse;
-    align-items: center;
     margin: 100px;
 }
 
 #customer-text {
-    margin:50px 100px 50px 100px;
+    margin:10px 90px 50px 100px;
     width:50%
 }
 
