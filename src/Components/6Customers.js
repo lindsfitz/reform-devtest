@@ -13,16 +13,36 @@ export default function Customers() {
     useEffect(() => {
 
         tl.current = gsap.timeline()
-
         // yellow bg from right bottom corner
-        // customer image and car img (EXCEPT ON MOBILE) from left and fade in
-        // text fades in from top
+        .from(q('#customer-bg-div'), {
+            duration:0.5,
+            x:-200,
+            y:200
+        })
+        // customer image fades in from left
+        .from(q('#customer-image'), {
+            opacity:0,
+            duration:0.3,
+            x:-300
+        })
+        // car image fades in from left
+        .from(q('#customer-car'), {
+            opacity:0,
+            duration:0.5,
+            x:-300
+        })
+        // text content fades in from top
+        .from(q('#customer-text'), {
+            opacity:0,
+            duration:0.5,
+            y:-50
+        })
 
     }, [])
 
 
     return (
-        <div id='section-six'>
+        <div id='section-six' ref={el}>
             <div id='customer-text'>
                 <h2 className='section-title'>CUSTOMERS WITH THAT NEW CAR SMELL</h2>
                 <h3 className='section-sub'>{`“With Eleanor I was able to drive 2 of my dream cars this year!  The process is always easy and affordable!”`}</h3>

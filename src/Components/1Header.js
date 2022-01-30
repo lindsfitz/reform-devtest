@@ -12,9 +12,12 @@ export default function Header() {
 
     useEffect(() => {
         tl.current = gsap.timeline()
-            .from(q('.first'), { duration: 0.5, x: -400 })
-            .from(q('.car'), { duration: 0.5, x: -1500 })
-            .from(q('.third'), { duration: 0.5, top: '-10px', color: 'transparent', opacity:0 })
+            // background & logo come in from left
+            .from(q('.first'), { duration: 0.5, x: -500, opacity:0 })
+            // cars fade in from left
+            .from(q('.car'), { duration: 0.5, x: -1500, opacity:0 })
+            // text content & phone image fade in from top
+            .from(q('.third'), { duration: 0.5, y:-50, color: 'transparent', opacity:0 })
     }, [])
 
 

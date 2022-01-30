@@ -9,7 +9,8 @@ export default function Boxes() {
     const el = useRef();
 
     useEffect(() => {
-
+        
+        // fade in and bounce down from top slightly -- staggered from left to right 
         gsap.from('.box-wrapper', {
             duration:2,
             opacity:0,
@@ -19,7 +20,6 @@ export default function Boxes() {
             ease:'elastic'
         })
 
-        // fade in and bounce down from top slightly -- staggered from left to right 
 
     }, [])
 

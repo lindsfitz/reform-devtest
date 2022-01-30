@@ -13,16 +13,36 @@ export default function Delivered() {
     useEffect(() => {
 
         tl.current = gsap.timeline()
-
         // map from left & header from top -- both fade in
+        .from(q('#map-image'), {
+            opacity:0,
+            x:500,
+            duration:0.5
+        })
+        // title fades in from top
+        .from(q('.section-title'), {
+            opacity:0,
+            y:-50,
+            duration:0.2
+        })
+        // subtitle fades in from top (from a lower starting point)
+        .from(q('.section-sub'), {
+            opacity:0,
+            y:-20,
+            duration:0.2
+        })
+        // car image fades in from left side
+        .from(q('#delivered-porsche'), {
+            opacity:0,
+            x:-500,
+            duration:0.5
+        })
         // subhead fade in from top & porsche image fades in from right (DOES NOT HAVE ANIMATION ON MOBILE)
-
-
     }, [])
 
 
     return (
-        <div id='section-three'>
+        <div id='section-three' ref={el}>
             <div id='delivered-text'>
                 <h2 className='section-title'>DELIVERED TO YOUR DOOR.</h2>
                 <h3 className='section-sub'>Eleanor works with your schedule to have a white-glove delivery service deliver your new vehicle right to your door.</h3>

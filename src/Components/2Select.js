@@ -42,26 +42,28 @@ export default function Select() {
     useEffect(() => {
 
         tl.current = gsap.timeline()
+            // yellow bg box slides in from left
             .from(q('.first'), {
                 duration: 0.5,
-                x: -1000,
-                delay:2,
-                // opacity:0,
+                x: -500,
+                delay:1,
+                opacity:0,
                 scrollTrigger: {
                     trigger: '#vehicle-content',
                     start: 'top center'
                 }
             })
+            // text content fades in from top
             .from(q('#select-textcontent'), {
                 duration: 0.5,
                 opacity: 0,
-                y: -10,
-                delay:0.5,
+                y: -50,
                 scrollTrigger: {
                     trigger: '#vehicle-content',
                     start: 'top center'
                 },
             })
+            // car image fades in from left side
             .from(q('#car-image'), {
                 duration:0.4,
                 x:-300,
@@ -71,6 +73,7 @@ export default function Select() {
                     start: 'top center'
                 },
             })
+            // vehicle text content fades in -- no position change
             .from(q('#vehicle-content'), {
                 duration:0.4,
                 opacity:0,
