@@ -1,7 +1,14 @@
 import { React, useRef, useState, useEffect } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Boxes() {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const el = useRef();
+    const q = gsap.utils.selector(el);
+    const tl = useRef();
 
     const boxContent = [
         {
@@ -23,6 +30,22 @@ export default function Boxes() {
             key:3
         }
     ]
+
+
+    // for the GSAP animation here -- using FROM boxes slide down along y axis (approx 30px ish I would guess)
+    // opacity - 0; stagger: 0.2. Apply one animation for all three boxes using the class name 
+
+    // EXAMPLE :
+
+    // gsap.from(".box", {
+    //     duration: 2,
+    //     scale: 0.5, 
+    //     opacity: 0, 
+    //     delay: 0.5, 
+    //     stagger: 0.2,
+    //     ease: "elastic", 
+    //     force3D: true
+    //   });
 
 
     return (

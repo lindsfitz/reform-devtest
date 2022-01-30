@@ -108,6 +108,7 @@ body {
       /* margin-top:50px; */
       height: 661px;
       width:524px;
+      opacity: 1;
   }
 
   #arrows {
@@ -120,7 +121,8 @@ body {
 
   #select-textcontent {
       padding-left: 160px;
-      padding-right:100px
+      padding-right:100px;
+      opacity: 1;
   }
 
   #vehicle-content {
@@ -166,6 +168,7 @@ body {
       top:470px;
       left:90px;
       align-self: center;
+      opacity:1;
   }
 
 

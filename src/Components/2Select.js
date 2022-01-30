@@ -34,6 +34,7 @@ export default function Select() {
     //     else {setvIndex(0)}
     // }
 
+
     const el = useRef();
     const q = gsap.utils.selector(el);
     const tl = useRef();
@@ -43,27 +44,65 @@ export default function Select() {
         tl.current = gsap.timeline()
             .from(q('.first'), {
                 duration: 0.5,
-                width: 0,
+                x: -1000,
+                delay:2,
+                // opacity:0,
                 scrollTrigger: {
-                    trigger: q('#section-two'),
+                    trigger: '#vehicle-content',
                     start: 'top center'
                 }
-
             })
-
-
-
+            .from(q('#select-textcontent'), {
+                duration: 0.5,
+                opacity: 0,
+                y: -10,
+                delay:0.5,
+                scrollTrigger: {
+                    trigger: '#vehicle-content',
+                    start: 'top center'
+                },
+            })
+            .from(q('#car-image'), {
+                duration:0.4,
+                x:-300,
+                opacity:0,
+                scrollTrigger: {
+                    trigger: '#vehicle-content',
+                    start: 'top center'
+                },
+            })
+            .from(q('#vehicle-content'), {
+                duration:0.4,
+                opacity:0,
+                scrollTrigger: {
+                    trigger: '#vehicle-content',
+                    start: 'top center'
+                }
+            })
     }, [])
+
+    useEffect(() => {
+
+        gsap.from(q('#vehicle-content'), {
+            duration:1,
+            opacity:0
+        })
+        gsap.from(q('#car-image'), {
+            duration:0.5,
+            opacity:0,
+            x: -100
+        })
+    }, [vIndex])
 
 
     return (
-        <div className='first' id='section-two' ref={el}>
+        <div id='section-two' ref={el}>
             <div id='select-textcontent'>
                 <h2 className='section-title'>SELECT A VEHICLE FROM YOUR PHONE.</h2>
                 <h3 className='section-sub'>Select from a wide range of luxury vehicles in our inventory.  Drive it for a month, trade it the next for something else you have always wanted to own.</h3>
             </div>
             <div style={{ position: 'relative' }}>
-                <div id='section-bg-div'>
+                <div id='section-bg-div' className='first'>
                     <div id='arrows'>
 
                         <button onClick={()=>setvIndex(0)}>

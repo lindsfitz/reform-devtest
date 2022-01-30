@@ -13,8 +13,8 @@ export default function Header() {
     useEffect(() => {
         tl.current = gsap.timeline()
             .from(q('.first'), { duration: 0.5, x: -400 })
-            .from(q('.car'), { duration: 0.5, x: -420 })
-            .from(q('.third'), { duration: 0.5, top: '-10px', color: 'transparent' })
+            .from(q('.car'), { duration: 0.5, x: -1500 })
+            .from(q('.third'), { duration: 0.5, top: '-10px', color: 'transparent', opacity:0 })
     }, [])
 
 
@@ -37,7 +37,7 @@ export default function Header() {
                     <img className='car' id='header-porsche' src='/Images/porsche-model.png' />
                     {/* front porsche image */}
                 </div>
-                <img id='header-phone' src='/Images/header-phone.png' />
+                <img id='header-phone' className='third' src='/Images/header-phone.png' />
             </div>
         </div>
     )

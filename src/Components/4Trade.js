@@ -1,7 +1,14 @@
 import { React, useRef, useState, useEffect } from 'react';
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Trade() {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const el = useRef();
+    const q = gsap.utils.selector(el);
+    const tl = useRef();
 
 
     return (
