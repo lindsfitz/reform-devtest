@@ -10,6 +10,16 @@ export default function Customers() {
     const q = gsap.utils.selector(el);
     const tl = useRef();
 
+    useEffect(() => {
+
+        tl.current = gsap.timeline()
+
+        // yellow bg from right bottom corner
+        // customer image and car img (EXCEPT ON MOBILE) from left and fade in
+        // text fades in from top
+
+    }, [])
+
 
     return (
         <div id='section-six'>
@@ -26,8 +36,8 @@ export default function Customers() {
                 </div>
             </div>
             <div id='customer-bg-div'>
-                <img id='customer-image' src='/Images/customer-alex.png' />
-                <img id='customer-car' src='/Images/car1.png' />
+                <img id='customer-image' src='/Images/customer-alex.png' alt='customer-headshot' />
+                <img id='customer-car' src='/Images/car1.png' alt='sedan-sideview' />
             </div>
 
         </div>

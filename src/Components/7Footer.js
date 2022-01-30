@@ -13,7 +13,7 @@ export default function Footer () {
     return(
         <div id='footer'>
             <div id='foot-divider'></div>
-            <img src='/Images/logo-black.png' />
+            <img src='/Images/logo-black.png' alt='eleanor-logo' />
         </div>
     )
 }

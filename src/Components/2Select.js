@@ -106,31 +106,31 @@ export default function Select() {
                     <div id='arrows'>
 
                         <button onClick={()=>setvIndex(0)}>
-                            <img src='/Images/arrow-left.png' />
+                            <img src='/Images/arrow-left.png' alt='left-arrow' />
                         </button>
                         <button onClick={()=> setvIndex(1)}>
-                            <img src='/Images/arrow-right.png' />
+                            <img src='/Images/arrow-right.png' alt='right-arrow' />
                         </button>
                     </div>
                     <div id='vehicle-content'>
                         <div id='car-title'>{vehicles[vIndex].name}</div>
                         <div id='car-sub'>{vehicles[vIndex].subtitle}</div>
                         <div className='stat-boxes'>
-                            <img src='/Images/mpg.png' />
+                            <img src='/Images/mpg.png' alt='mpg-icon' />
                             <div>{vehicles[vIndex].mpg}</div>
                         </div>
                         <div className='stat-boxes'>
-                            <img src='/Images/hpstat.png' />
+                            <img src='/Images/hpstat.png' alt='graph-icon' />
                             <div>{vehicles[vIndex].HPstat}</div>
                         </div>
                         <div className='stat-boxes'>
-                            <img src='/Images/accelerate.png' />
+                            <img src='/Images/accelerate.png' alt='speedometer-icon' />
                             <div>{vehicles[vIndex].acceleration}</div>
                         </div>
                         {/* div for stats section on diff cars -- same format but different content. OnClick, show content of next index in vehicle object */}
                     </div>
                 </div>
-                <img id='car-image' src={`/Images/${vehicles[vIndex].image}.png`} />
+                <img id='car-image' src={`/Images/${vehicles[vIndex].image}.png`} alt='example-car' />
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -7,8 +7,21 @@ export default function Boxes() {
     gsap.registerPlugin(ScrollTrigger);
 
     const el = useRef();
-    const q = gsap.utils.selector(el);
-    const tl = useRef();
+
+    useEffect(() => {
+
+        gsap.from('.box-wrapper', {
+            duration:2,
+            opacity:0,
+            delay:0.5,
+            stagger:0.2,
+            y:-50,
+            ease:'elastic'
+        })
+
+        // fade in and bounce down from top slightly -- staggered from left to right 
+
+    }, [])
 
     const boxContent = [
         {
@@ -32,29 +45,14 @@ export default function Boxes() {
     ]
 
 
-    // for the GSAP animation here -- using FROM boxes slide down along y axis (approx 30px ish I would guess)
-    // opacity - 0; stagger: 0.2. Apply one animation for all three boxes using the class name 
-
-    // EXAMPLE :
-
-    // gsap.from(".box", {
-    //     duration: 2,
-    //     scale: 0.5, 
-    //     opacity: 0, 
-    //     delay: 0.5, 
-    //     stagger: 0.2,
-    //     ease: "elastic", 
-    //     force3D: true
-    //   });
-
 
     return (
-        <div style={{marginTop:'700px'}}>
+        <div style={{marginTop:'700px'}} ref={el}>
             <div className='boxes-container'>
                 
                { boxContent.map((item) => (
                 <div className='box-wrapper' key={item.key}>
-                    <img className='box-image' src={`/Images/${item.image}`} />
+                    <img className='box-image' src={`/Images/${item.image}`} alt='box-icon' />
                     <h2 className='box-title'>{item.title}</h2>
                     <h3 className='box-content'>{item.content}</h3>
                 </div>
