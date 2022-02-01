@@ -13,9 +13,10 @@ export default function Boxes() {
         gsap.from('.box-wrapper', {
             scrollTrigger: {
                 trigger: '.boxes-container',
-                start:'bottom bottom'
+                start:'top top'
             },
             duration:2,
+            delay:0.2,
             opacity:0,
             delay:0.5,
             stagger:0.2,

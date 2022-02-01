@@ -37,7 +37,13 @@ body {
       color: var(--darkgrey);
       font-size: 16px;
       line-height: 54px;
-      font-family: "Eina03-Regular";
+      font-family: "Eina03W03-SemiBold";
+  }
+
+  #pre-loader {
+      display: flex;
+      justify-content: center;
+      align-items: flex;
   }
 
   /* --------- SECTION 1 ------------- */
@@ -315,7 +321,7 @@ button {
     font-size: 12px;
     line-height: 26px;
     letter-spacing: -0.4;
-    font-family: "Eina03-Regular";
+    font-family: "Eina03W03-SemiBold";
     font-weight: 400;
 }
 
@@ -578,5 +584,229 @@ button {
         margin-bottom:30px;
 }
 
+    
+}
+
+@media screen and (max-width:820px) {
+
+        /* -----REPEAT STYLE CLASSES------ */
+
+        .section-title {
+            font-size: 45px;
+            line-height: 48px;
+            letter-spacing: 0.22px;
+            width:80%;
+        }
+    
+        /* ------SECTION 1------------ */
+    
+        #header-bg-div {
+            height:400px;
+            width:820px;
+        }
+
+        #main-heading {
+            font-size: 62px;
+            line-height: 58px;
+            letter-spacing: -2px;
+        }
+    
+        #top-logo {
+            left:19px;
+        }
+    
+        #header-content {
+            left: 19px;
+        }
+    
+    
+        #header-applink {
+            top:145px;
+        }
+
+       
+    
+        #header-A7 {
+            left:-59px;
+            top:240px;
+            height: 97px;
+        }
+    
+        #header-car1 {
+            top:270px;
+            height: 62px;
+            left: 117px;
+        }
+    
+        #header-porsche {
+            top:270px;
+            height: 81px;
+            left:10px;
+        }
+    
+        #header-phone {
+            /* display:none; */
+            height:370px;
+            right: 290px;
+            top:75px;
+        }
+    
+        /* ------SECTION 2------------ */
+    
+        #section-two {
+            margin-left: 20px;
+            flex-direction:column;
+        }
+    
+        #section-bg-div {
+            margin-top:50px;
+            height: 340px;
+            width:375px;
+        }
+    
+        #select-textcontent {
+           padding:0;
+        }
+    
+        #vehicle-content {
+            position:relative;
+            top:40px;
+            left: 30px;
+        }
+    
+        #car-title {
+            font-size: 40px;
+            line-height: 47px;
+        }
+    
+        #car-image {
+            top:310px;
+            align-self: center;
+            width:388px;
+            left:0
+        }
+    
+        /* ------SECTION 3------------ */
+    
+        #section-three {
+            flex-direction: column;
+        }
+    
+        #delivered-text {
+            padding:0;
+            width:100%;
+        }
+    
+        #map-image {
+            width: 500px;
+            overflow: hidden;
+            align-self: center;
+        }
+        
+        #delivered-porsche {
+            display:none;
+        }
+        
+    
+        /* ------SECTION 4------------ */
+    
+        #section-four {
+            flex-direction: column;
+        }
+    
+        #trade-text {
+            margin: 0;
+            padding-left:0;
+            width:100%;
+            margin:20px;
+        }
+    
+        #trade-bg-div {
+            height:518px;
+            width:307px;
+            left: 0px;
+            position:relative;
+            margin-left:0;
+        }
+    
+        #trade-porsche {
+            top: 180px;
+            width:418px;
+            left:-10px;
+        }
+    
+        #trade-phone {
+            top:30px;
+            left:183px;
+            width: 213px;
+        }
+    
+        /* ------SECTION 5------------ */
+    
+        .boxes-container {
+            flex-direction: column;
+            margin:0;
+            align-items:center;
+            justify-content: center;
+        }
+    
+        .box-wrapper {
+            margin:0 0 10px 0;
+            /* padding: 50px; */
+        }
+    
+        .box-content {
+         width:65%;
+        }
+    
+        /* ------SECTION 6------------ */
+    
+        #section-six {
+            flex-direction: column;
+            align-items: center;
+           margin:0;
+        }
+    
+        #customer-text {
+            margin:20px;
+        }
+        
+        #divider {
+            width: 374px;
+            height: 4px;
+        }
+        
+        #cust-font {
+            font-size: 12px;
+            line-height: 26px;
+            letter-spacing: -0.4;
+            font-family: "Eina03-Regular";
+            font-weight: 400;
+        }
+        
+        #customer-bg-div {
+            width:414px;
+            height:469px;
+        }
+        
+        #customer-image {
+            width:284px;
+            left:50px
+        }
+    
+        #customer-car {
+            display:none;
+        }
+    
+        /* -------FOOTER --------- */
+    
+        #footer {
+            margin:0 20px 50px 20px
+        }
+    
+        #foot-divider {
+            width:374px;
+            margin-bottom:30px;
+    }
     
 }

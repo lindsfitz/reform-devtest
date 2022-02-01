@@ -15,7 +15,7 @@ export default function Delivered() {
         tl.current = gsap.timeline({
             scrollTrigger: {
                 trigger: "#map-image",
-                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+                start: "center center", // when the top of the trigger hits the top of the viewport
         }})
         // map from left & header from top -- both fade in
         .from(q('#map-image'), {

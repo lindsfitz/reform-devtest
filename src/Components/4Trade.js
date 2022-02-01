@@ -15,7 +15,7 @@ export default function Trade() {
         tl.current = gsap.timeline({
             scrollTrigger: {
                 trigger: "#trade-bg-div",
-                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+                start: "top top", // when the top of the trigger hits the top of the viewport
         }})
         // yellow bg & porsche img slide in from right together
         .from(q('#trade-bg-div'), {

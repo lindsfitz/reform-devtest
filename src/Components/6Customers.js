@@ -20,8 +20,10 @@ export default function Customers() {
         // yellow bg from right bottom corner
         .from(q('#customer-bg-div'), {
             duration:0.5,
+            delay:0.2,
             x:-200,
             y:200,
+            delay:0.5,
             opacity:0
         })
         // customer image fades in from left
