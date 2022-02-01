@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,12 +12,17 @@ export default function Customers() {
 
     useEffect(() => {
 
-        tl.current = gsap.timeline()
+        tl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#customer-bg-div",
+                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+        }})
         // yellow bg from right bottom corner
         .from(q('#customer-bg-div'), {
             duration:0.5,
             x:-200,
-            y:200
+            y:200,
+            opacity:0
         })
         // customer image fades in from left
         .from(q('#customer-image'), {
@@ -52,7 +57,7 @@ export default function Customers() {
                 </div>
                 <div className='app-link'>
                     Available On the App
-                    <button><img src='/Images/arrow-right.png' /></button>
+                    <button><img src='/Images/arrow-right.png' alt='right-arrow'/></button>
                 </div>
             </div>
             <div id='customer-bg-div'>

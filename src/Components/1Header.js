@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -24,13 +24,13 @@ export default function Header() {
     return (
         <div ref={el}>
             <div id='header-bg-div' className='first'>
-                <img className='first' style={{ position: 'absolute', top: '50px', left: '19px' }} src='/Images/logo-white.png' alt='eleanor-logo' />
-                <div style={{ position: 'absolute', top: '90px', left: '19px' }}>
+                <img className='first' id='top-logo' src='/Images/logo-white.png' alt='eleanor-logo' />
+                <div id='header-content' >
                     {/* div for the tagline and the link to the app store */}
                     <h1 className='third' id='main-heading'>DRIVE A NEW {<br />} CAR EVERY MONTH.</h1>
                     <div className='app-link third' id='header-applink'>
                         Available On the App
-                        <button><img src='/Images/arrow-right.png' /></button>
+                        <button><img src='/Images/arrow-right.png' alt='right-arrow' /></button>
                     </div>
                     <img className='car' id='header-A7' src='/Images/A7-MY18.png' alt='white-sedan' />
                     {/* left back car image */}

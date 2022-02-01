@@ -41,48 +41,35 @@ export default function Select() {
 
     useEffect(() => {
 
-        tl.current = gsap.timeline()
+        tl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".first-select",
+                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+        }})
             // yellow bg box slides in from left
-            .from(q('.first'), {
+            .from(q('.first-select'), {
                 duration: 0.5,
                 x: -500,
-                delay:1,
                 opacity:0,
-                scrollTrigger: {
-                    trigger: '#vehicle-content',
-                    start: 'top center'
-                }
             })
             // text content fades in from top
             .from(q('#select-textcontent'), {
                 duration: 0.5,
                 opacity: 0,
                 y: -50,
-                scrollTrigger: {
-                    trigger: '#vehicle-content',
-                    start: 'top center'
-                },
             })
             // car image fades in from left side
             .from(q('#car-image'), {
                 duration:0.4,
                 x:-300,
                 opacity:0,
-                scrollTrigger: {
-                    trigger: '#vehicle-content',
-                    start: 'top center'
-                },
             })
             // vehicle text content fades in -- no position change
             .from(q('#vehicle-content'), {
                 duration:0.4,
                 opacity:0,
-                scrollTrigger: {
-                    trigger: '#vehicle-content',
-                    start: 'top center'
-                }
             })
-    }, [])
+    }, [ ])
 
     useEffect(() => {
 
@@ -105,7 +92,7 @@ export default function Select() {
                 <h3 className='section-sub'>Select from a wide range of luxury vehicles in our inventory.  Drive it for a month, trade it the next for something else you have always wanted to own.</h3>
             </div>
             <div style={{ position: 'relative' }}>
-                <div id='section-bg-div' className='first'>
+                <div id='section-bg-div' className='first-select'>
                     <div id='arrows'>
 
                         <button onClick={()=>setvIndex(0)}>

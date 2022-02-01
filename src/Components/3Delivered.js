@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,7 +12,11 @@ export default function Delivered() {
 
     useEffect(() => {
 
-        tl.current = gsap.timeline()
+        tl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#map-image",
+                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+        }})
         // map from left & header from top -- both fade in
         .from(q('#map-image'), {
             opacity:0,

@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,7 +12,11 @@ export default function Trade() {
 
     useEffect(() => {
 
-        tl.current = gsap.timeline()
+        tl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#trade-bg-div",
+                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+        }})
         // yellow bg & porsche img slide in from right together
         .from(q('#trade-bg-div'), {
             opacity:0,

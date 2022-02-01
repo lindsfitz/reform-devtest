@@ -47,7 +47,7 @@ export default function Boxes() {
 
 
     return (
-        <div style={{marginTop:'700px'}} ref={el}>
+        <div style={{marginTop:'400px'}} ref={el}>
             <div className='boxes-container'>
                 
                { boxContent.map((item) => (
