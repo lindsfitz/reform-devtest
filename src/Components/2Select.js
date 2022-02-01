@@ -43,7 +43,7 @@ export default function Select() {
 
         tl.current = gsap.timeline({
             scrollTrigger: {
-                trigger: ".first-select",
+                trigger: "#select-textcontent",
                 start: "top top", // when the top of the trigger hits the top of the viewport
         }})
             // yellow bg box slides in from left

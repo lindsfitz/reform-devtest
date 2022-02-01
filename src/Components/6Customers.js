@@ -14,8 +14,8 @@ export default function Customers() {
 
         tl.current = gsap.timeline({
             scrollTrigger: {
-                trigger: "#customer-bg-div",
-                start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+                trigger: "#customer-text",
+                start: "top center", // when the top of the trigger hits the top of the viewport
         }})
         // yellow bg from right bottom corner
         .from(q('#customer-bg-div'), {
