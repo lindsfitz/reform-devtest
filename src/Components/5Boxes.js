@@ -9,9 +9,12 @@ export default function Boxes() {
     const el = useRef();
 
     useEffect(() => {
-        
         // fade in and bounce down from top slightly -- staggered from left to right 
         gsap.from('.box-wrapper', {
+            scrollTrigger: {
+                trigger: '.boxes-container',
+                start:'bottom bottom'
+            },
             duration:2,
             opacity:0,
             delay:0.5,
@@ -19,8 +22,6 @@ export default function Boxes() {
             y:-50,
             ease:'elastic'
         })
-
-
     }, [])
 
     const boxContent = [
@@ -49,7 +50,6 @@ export default function Boxes() {
     return (
         <div style={{marginTop:'400px'}} ref={el}>
             <div className='boxes-container'>
-                
                { boxContent.map((item) => (
                 <div className='box-wrapper' key={item.key}>
                     <img className='box-image' src={`/Images/${item.image}`} alt='box-icon' />
